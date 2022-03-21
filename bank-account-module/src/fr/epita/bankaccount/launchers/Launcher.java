@@ -19,8 +19,18 @@ public class Launcher {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("hello, please input a customer name: ");
-        String line = scanner.nextLine();
-        System.out.println("this is what you have typed: "+ line);
+        String name = scanner.nextLine();
+
+        System.out.println("please input the customer address: ");
+        String address = scanner.nextLine();
+
+        Customer customerFromConsole = new Customer(name,  address);
+
+        System.out.println("about to create this customer: " + customerFromConsole);
+
+
+
+
 
 
     }
