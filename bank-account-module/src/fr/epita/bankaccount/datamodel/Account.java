@@ -1,9 +1,12 @@
 package fr.epita.bankaccount.datamodel;
 
-import java.math.BigDecimal;
 
-public class Account {
+public abstract class Account {
 
-    private Double balance;
+    protected Double balance;
+
+    public Account(double initialBalance){
+        this.balance = initialBalance;
+    }
 
 }

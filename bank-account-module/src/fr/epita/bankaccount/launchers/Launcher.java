@@ -1,7 +1,10 @@
 package fr.epita.bankaccount.launchers;
 
 
+import fr.epita.bankaccount.datamodel.Account;
 import fr.epita.bankaccount.datamodel.Customer;
+import fr.epita.bankaccount.datamodel.InvestmentAccount;
+import fr.epita.bankaccount.datamodel.SavingsAccount;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
@@ -30,7 +33,8 @@ public class Launcher {
 
         customerFromConsole.setName("123");
 
+        SavingsAccount account = new SavingsAccount(123);
 
-
+        InvestmentAccount investmentAccount = new InvestmentAccount(456);
     }
 }

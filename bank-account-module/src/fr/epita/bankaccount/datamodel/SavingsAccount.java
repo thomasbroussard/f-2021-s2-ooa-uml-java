@@ -2,7 +2,19 @@ package fr.epita.bankaccount.datamodel;
 
 public class SavingsAccount extends Account{
 
-    private double interestRate;
+   protected double interestRate;
+
+   public SavingsAccount(double initialBalance) {
+      super(initialBalance);
+   }
+
+   public double computeInterests(){
+      return this.interestRate * balance;
+   }
+
+   public void withDraw(double amount){
+      this.balance -= amount;
+   }
 
 
 }
