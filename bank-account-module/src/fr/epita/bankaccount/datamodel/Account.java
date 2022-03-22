@@ -4,6 +4,6 @@ import java.math.BigDecimal;
 
 public class Account {
 
-    private double balance;
+    private Double balance;
 
 }
