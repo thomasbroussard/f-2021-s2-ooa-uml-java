@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bank-account-module/bank-account-project.iml" filepath="$PROJECT_DIR$/bank-account-module/bank-account-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-structures-demo/data-structures-demo.iml" filepath="$PROJECT_DIR$/data-structures-demo/data-structures-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/geometry/geometry.iml" filepath="$PROJECT_DIR$/geometry/geometry.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-reference-project.iml" filepath="$PROJECT_DIR$/java-reference-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/titanic/titanic.iml" filepath="$PROJECT_DIR$/titanic/titanic.iml" />
       <module fileurl="file://$PROJECT_DIR$/types-demo.iml" filepath="$PROJECT_DIR$/types-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/types-demonstration/types-demonstration.iml" filepath="$PROJECT_DIR$/types-demonstration/types-demonstration.iml" />
     </modules>
