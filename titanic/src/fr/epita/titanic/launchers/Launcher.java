@@ -14,21 +14,32 @@ public class Launcher {
         }
         Scanner scanner = new Scanner(file);
         List<Passenger> passengers = new ArrayList<>();
+        List<Passenger> invalidPassengers = new ArrayList<>();
         double averageAge = 0;
+        //we want to skip the header row
+        scanner.nextLine();
         while (scanner.hasNext()){
             String line = scanner.nextLine();
             String[] split = line.split(",");
 
             String passengerId = split[0];
-            boolean survived = Boolean.valueOf(split[1]);
+            boolean survived = split[1].equals("1");
             String pclass = split[2];
             String gender = split[3];
-            double age = Double.valueOf(split[4]);
 
+            String rawAge = split[4];
+            double age = 0;
+            boolean invalidAge = rawAge == null || rawAge.isEmpty();
+            if (!invalidAge){
+                age = Double.parseDouble(rawAge);
+            }
             Passenger passenger = new Passenger(passengerId,survived, pclass,gender, age);
-            passengers.add(passenger);
-            averageAge += passenger.getAge();
-
+            if (invalidAge) {
+                invalidPassengers.add(passenger);
+            } else {
+                passengers.add(passenger);
+                averageAge += passenger.getAge();
+            }
         }
         averageAge = averageAge / passengers.size();
 

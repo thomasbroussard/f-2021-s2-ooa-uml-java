@@ -2,7 +2,6 @@ package fr.epita.titanic.datamodel;
 
 public class Passenger {
 
-
     private String passengerId;
     private boolean survived;
     private String pclass;
