@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class TestPassengersDataService {
 
@@ -18,7 +19,7 @@ public class TestPassengersDataService {
 
     }
 
-    private static void whenWeSaveListOfPassengers_ThenACsvFileShouldBeUpdated() {
+    private static void whenWeSaveListOfPassengers_ThenACsvFileShouldBeUpdated() throws FileNotFoundException {
         //given
         List<Passenger> passengers = new ArrayList<>();
         Passenger passenger1 = new Passenger("0", true, "2", "male",20);
@@ -31,13 +32,24 @@ public class TestPassengersDataService {
         PassengersDataService.writeAsCsv(passengers, "newCsv.csv");
 
         //Then
-        File file = new File("newCsv.csv");
-        boolean fileExists = file.exists();
-        if (!fileExists){
-            System.out.println("error!!");
+        File file  = new File("newCsv.csv");
+        Scanner scanner = new Scanner(file);
+        scanner.nextLine();
+        String firstDataLine = scanner.nextLine();
+        String whatShouldBeAtFirstLine = "0,male,2,true,20.0";
+
+//        String a = "a";
+//        String a2 = "a";
+//
+//        a == a2 //should be true
+
+
+        if (firstDataLine.equals(whatShouldBeAtFirstLine)){
+            System.out.println("whenWeSaveListOfPassengers_ThenACsvFileShouldBeUpdated:      ok");
         }else{
-            System.out.println("success!");
+            System.out.println("whenWeSaveListOfPassengers_ThenACsvFileShouldBeUpdated:      ko");
         }
+
 
 
     }
