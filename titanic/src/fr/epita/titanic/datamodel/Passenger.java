@@ -55,4 +55,16 @@ public class Passenger {
     public void setAge(double age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "passengerId='" + passengerId + '\'' +
+                ", survived=" + survived +
+                ", pclass='" + pclass + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                "}\n";
+    }
+
 }
