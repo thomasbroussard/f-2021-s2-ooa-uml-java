@@ -27,3 +27,11 @@ f
 6geometry/src/fr/epita/geometry/datamodel/Triangle.java,6\9\69f1ca125882c9e5baecf1f286158613dcdde78c
 ]
 -data-structures-demo/data-structures-demo.iml,a\0\a0701b30c1f4e57a07e88f3f250bdad0de3a2fca
+e
+5geometry/src/fr/epita/geometry/launcher/Launcher.java,b\c\bc38d7c7a8e6ce5ddc8197f36aaf753fe7fd27e4
+t
+Ddata-structures-demo/src/fr/epita/datastructures/tests/TestList.java,d\b\db109673a03f66d5deffcbb4f63c9575d4cab941
+s
+Cdata-structures-demo/src/fr/epita/datastructures/tests/TestMap.java,3\1\31d2f24f4b3fdf5a301645b59fc2f6fd6450ee27
+s
+Cdata-structures-demo/src/fr/epita/datastructures/tests/TestSet.java,8\3\83faf3cad213d4e1892edbbd0b6575cb1b8bddfc
