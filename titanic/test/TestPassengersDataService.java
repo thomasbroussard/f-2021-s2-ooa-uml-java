@@ -29,10 +29,10 @@ public class TestPassengersDataService {
         passengers.add(passenger2);
 
         //when
-        PassengersDataService.writeAsCsv(passengers, "newCsv.csv");
+        PassengersDataService.writeAsCsv(passengers, "newCsv\\a.csv");
 
         //Then
-        File file  = new File("newCsv.csv");
+        File file  = new File("newCsv\\a.csv");
         Scanner scanner = new Scanner(file);
         scanner.nextLine();
         String firstDataLine = scanner.nextLine();

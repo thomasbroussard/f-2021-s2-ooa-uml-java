@@ -12,6 +12,8 @@ import java.util.*;
 public class PassengersDataService {
 
 
+    private static String filePath;
+
     public static final String SURVIVED_KEY = "survived";
     public static final String NOT_SURVIVED_KEY = "not-survived";
 
@@ -97,12 +99,17 @@ public class PassengersDataService {
         return null;
     }
 
+
+
+
+
     public static void writeAsCsv(List<Passenger> passengers, String filePath) {
         File file = new File(filePath);
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            file.createNewFile();
 
+        file.getParentFile().mkdirs();
+
+        try (PrintWriter printWriter = new PrintWriter(file)) {
             String header = "passengerId, gender, pclass, survived, age";
             printWriter.println(header);
             for (Passenger passenger : passengers) {
