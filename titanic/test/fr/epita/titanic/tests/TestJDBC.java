@@ -14,7 +14,12 @@ public class TestJDBC {
             if (schema.equalsIgnoreCase("public")){
                 System.out.println("successfully connected to the DB");
             }
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO PASSENGERS(PASSENGER_ID, SURVIVED, GENDER, AGE, PCLASS) VALUES(2,false,'male',22,3)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO PASSENGERS(PASSENGER_ID, SURVIVED, GENDER, AGE, PCLASS) VALUES(?, ?,?,?,?)");
+            preparedStatement.setInt(1, 3);
+            preparedStatement.setBoolean(2, false);
+            preparedStatement.setString(3, "male");
+            preparedStatement.setInt(4, 50);
+            preparedStatement.setInt(5, 3);
             preparedStatement.execute();
 
 
